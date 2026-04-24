@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class arr{
+  int a[6];
+  public:
+  void assign(int pa[]){
+    for(int i=0;i<6;i++){
+      a[i]=pa[i];
+    }
+  }
+  void deletion(int pos){
+    for(int i=pos;i<6;i++){
+      a[i]=a[i+1];
+    }
+  }
+  void display(int n){
+    for(int i=0;i<n;i++){
+      cout<<a[i]<<" ";
+    }
+  }
+};
+int main(){
+  arr ar;
+  int init[6]={1,2,3,4,5,6};
+  ar.assign(init);
+  ar.deletion(3);
+  ar.display(5);
+}
