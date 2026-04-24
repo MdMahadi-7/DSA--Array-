@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class arr{
+  int a[6];
+  public:
+  void assign(int pa[]){
+    for(int i=0;i<5;i++){
+      a[i]=pa[i];
+    }
+  }
+  void insert(int index, int n){
+    for(int i=5;i>=index;i--){
+      a[i+1]=a[i];
+    }
+    a[index]=n;
+  }
+  void display(int p){
+    for(int i=0;i<p;i++){
+      cout<<a[i]<<" ";
+    }
+  }
+};
+int main(){
+  arr ob;
+  int init[5]={1,2,3,4,5};
+  ob.assign(init);
+  ob.insert(3,0);
+  ob.display(6);
+}
