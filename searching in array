@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class arr{
+  int a[10]={1,2,3,4,5,6,7,8,9,0};
+  public:
+  void display(){
+    for(int i=0;i<10;i++){
+      cout<<a[i]<<" ";
+    }
+  }
+  void search(int n){
+    int i,loc=-1,found=0;
+    for(i=0;i<10;i++){
+      if(a[i]==n){
+        loc=i;
+        found++;
+        cout<<"found at location "<<i+1<<endl;
+      }
+    }
+    if(loc==-1) cout<<"NOT FOUND!";
+    else {
+      cout<<"FOUND "<<found<<" TIMES!";
+    }
+  }
+};
+int main(){
+  arr ob;
+  ob.search(9);
+}
